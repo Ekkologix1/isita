@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores Amarillas para Ti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scene-container">
+    
+    <!-- Ambient Warm Lighting -->
+    <div class="ambient-glow"></div>
+
+    <!-- Main Flowers Section -->
+    <main class="flowers-card" id="flowersCard" role="button" tabindex="0" aria-label="Ramo de flores amarillas. Toca para continuar.">
+      <div class="photo-frame">
+        <img src="flowers.jpg" alt="Ramo realista de flores amarillas, girasoles y rosas con luz natural" class="flower-img" id="flowerImg" />
+        <div class="photo-reflection"></div>
+      </div>
+      <div class="caption-tag">
+        <span class="sparkle">✦</span>
+        <span>Un detalle especial para ti</span>
+        <span class="sparkle">✦</span>
+      </div>
+    </main>
+
+    <!-- Realistic Envelope Section -->
+    <div class="envelope-overlay" id="envelopeOverlay">
+      <div class="envelope-container" id="envelopeContainer">
+        
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Sobre de carta con sello de lacre. Toca para abrir.">
+          <!-- Back layer of envelope interior -->
+          <div class="envelope-back"></div>
+
+          <!-- The physical letter sliding out -->
+          <article class="letter" id="letter" aria-live="polite">
+            <div class="letter-texture"></div>
+            <div class="letter-content" id="letterContent">
+              <header class="letter-header">
+                <div class="letter-botanical">🌻</div>
+                <div class="letter-date" id="letterDate">21 de Septiembre</div>
+              </header>
+              
+              <h1 class="letter-salutation" id="letterSalutation">Para mi querida Isita,</h1>
+              
+              <div class="letter-text" id="letterText">
+                <p>Dicen que regalar flores amarillas representa un amor sincero, la alegría compartida y la promesa de permanecer juntos en los días más luminosos y en los más grises.</p>
+                <p>Hoy quise entregarte estas flores para que nunca se marchiten, y para recordarte lo infinitamente especial que eres en mi vida. Gracias por iluminar cada instante con tu ternura y tu sonrisa.</p>
+              </div>
+
+              <footer class="letter-footer">
+                <p class="letter-farewell" id="letterFarewell">Con todo mi amor y cariño,</p>
+                <p class="letter-signature" id="letterSignature">Siempre contigo ♡</p>
+              </footer>
+
+              <!-- Letter Actions -->
+              <div class="letter-controls">
+                <button type="button" class="btn-action" id="btnCloseLetter" title="Guardar carta en el sobre">
+                  <span>✉ Doblar y guardar</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Front envelope pockets (creates the slot) -->
+          <div class="envelope-pocket">
+            <div class="pocket-fold pocket-left"></div>
+            <div class="pocket-fold pocket-right"></div>
+            <div class="pocket-fold pocket-bottom"></div>
+          </div>
+
+          <!-- Envelope top flap -->
+          <div class="envelope-flap" id="envelopeFlap">
+            <div class="flap-triangle"></div>
+          </div>
+
+          <!-- Wax Seal -->
+          <div class="envelope-seal" id="envelopeSeal" title="Sello de lacre con girasol">
+            <img src="seal.png" alt="Sello de lacre dorado con girasol" class="seal-image" />
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Interaction Hints -->
+    <div class="instruction-banner" id="instructionBanner">
+      <p id="instructionText">Toca el ramo de flores</p>
+    </div>
+
+    <!-- Reset to flowers button (appears once envelope is revealed) -->
+    <button type="button" class="btn-reset" id="btnReset" title="Volver al ramo de flores" aria-label="Volver al ramo de flores">
+      ↺ Volver al ramo
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
